@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrisisConnect Unified Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main class="app-shell">
+        <section id="loginView" class="card login-card">
+            <h1>CrisisConnect</h1>
+            <p>Real-Time Emergency Help and Communication System</p>
+            <label for="loginName">Username</label>
+            <input id="loginName" type="text" placeholder="Enter your name" />
+            <label for="loginRole">Role</label>
+            <select id="loginRole">
+                <option value="CITIZEN">Victim / Citizen</option>
+                <option value="RESPONDER">Responder</option>
+                <option value="ADMIN">Admin</option>
+            </select>
+            <button id="loginBtn" class="btn primary">Enter Dashboard</button>
+            <p id="loginError" class="error"></p>
+        </section>
+
+        <section id="dashboardView" class="dashboard hidden">
+            <header class="topbar">
+                <div>
+                    <h2 id="welcomeText"></h2>
+                    <p id="tcpStatus">TCP Bridge: Disconnected</p>
+                </div>
+                <button id="logoutBtn" class="btn">Logout</button>
+            </header>
+
+            <div class="layout">
+                <aside class="sidebar card">
+                    <h3>Case Overview</h3>
+                    <div class="metric-grid">
+                        <article><span>Total</span><strong id="mTotal">0</strong></article>
+                        <article><span>Active</span><strong id="mActive">0</strong></article>
+                        <article><span>Resolved</span><strong id="mResolved">0</strong></article>
+                        <article class="danger"><span>High</span><strong id="mHigh">0</strong></article>
+                    </div>
+                    <label for="caseFilter">Filter</label>
+                    <select id="caseFilter">
+                        <option value="ALL">All Cases</option>
+                        <option value="ACTIVE">Active</option>
+                        <option value="RESOLVED">Resolved</option>
+                    </select>
+                    <input id="caseSearch" type="search" placeholder="Search by id/type/location/victim" />
+                </aside>
+
+                <section class="workspace">
+                    <section id="victimPanel" class="card hidden">
+                        <h3>Emergency Alert Module</h3>
+                        <div class="form-grid">
+                            <label>Emergency Type</label>
+                            <select id="victimType">
+                                <option value="MEDICAL">Medical</option>
+                                <option value="ACCIDENTAL">Accidental</option>
+                                <option value="FIRE">Fire</option>
+                                <option value="CRIME">Crime</option>
+                            </select>
+                            <label>Location</label>
+                            <input id="victimLocation" type="text" placeholder="Current location" />
+                            <label>Message</label>
+                            <textarea id="victimMessage" rows="3" placeholder="Describe your emergency"></textarea>
+                        </div>
+                        <div class="actions">
+                            <button id="sendSosBtn" class="btn danger">SOS Alert</button>
+                            <button id="sendAlertBtn" class="btn primary">Send Alert</button>
+                        </div>
+                    </section>
+
+                    <section id="responderPanel" class="card hidden">
+                        <h3>Responder Dashboard</h3>
+                        <p>Track active emergencies, participate in live chat, and update status.</p>
+                        <div class="actions">
+                            <button id="refreshResponderBtn" class="btn">Refresh Cases</button>
+                        </div>
+                    </section>
+
+                    <section id="adminPanel" class="card hidden">
+                        <h3>Admin Monitoring Panel</h3>
+                        <p>View all emergencies, assign responders, and close cases.</p>
+                        <div class="assign-box">
+                            <label for="assignCaseId">Case ID</label>
+                            <input id="assignCaseId" type="number" min="1" />
+                            <label for="assignResponder">Assign Responder</label>
+                            <input id="assignResponder" type="text" placeholder="Responder username" />
+                            <div class="actions">
+                                <button id="assignBtn" class="btn primary">Assign</button>
+                                <button id="resolveBtn" class="btn">Close Case</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card cases-card">
+                        <h3>Active Emergencies</h3>
+                        <div id="caseList" class="case-list"></div>
+                    </section>
+
+                    <section class="card chat-card">
+                        <h3>Live Case Chat</h3>
+                        <div class="chat-controls">
+                            <input id="chatCaseId" type="number" min="1" placeholder="Case ID" />
+                            <input id="chatInput" type="text" placeholder="Type update for selected case" />
+                            <button id="chatSendBtn" class="btn primary">Send</button>
+                        </div>
+                        <div id="chatFeed" class="chat-feed"></div>
+                    </section>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

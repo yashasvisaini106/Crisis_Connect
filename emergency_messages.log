@@ -1,0 +1,10 @@
+2026-02-28 16:53:53 [2026-02-28 16:53:53] [HIGH PRIORITY] Client#1: HELP needed at block A 
+2026-02-28 18:22:09 [2026-02-28 18:22:09] [HIGH PRIORITY] Client#1: help
+2026-02-28 18:54:48 {"type":"chat","timestamp":"2026-02-28 18:54:48","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY SOS CASE#1 TYPE:FIRE LOCATION:Block A MSG:FIRE near entrance"}
+2026-02-28 19:01:42 {"type":"chat","timestamp":"2026-02-28 19:01:42","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY SOS CASE#1 TYPE:MEDICAL LOCATION:chandigarh MSG:accident"}
+2026-02-28 19:02:47 {"type":"chat","timestamp":"2026-02-28 19:02:47","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY ALERT CASE#2 TYPE:FIRE LOCATION:chandigarh MSG:hellppp"}
+2026-02-28 19:02:53 {"type":"chat","timestamp":"2026-02-28 19:02:53","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY SOS CASE#3 TYPE:FIRE LOCATION:chandigarh MSG:hellppp"}
+2026-02-28 19:03:05 {"type":"chat","timestamp":"2026-02-28 19:03:05","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY SOS CASE#4 TYPE:CRIME LOCATION:chandigarh MSG:help"}
+2026-02-28 19:13:30 {"type":"chat","timestamp":"2026-02-28 19:13:30","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY SOS CASE#5 TYPE:ACCIDENTAL LOCATION:mohali MSG:urgent help"}
+2026-02-28 19:32:13 {"type":"chat","timestamp":"2026-02-28 19:32:13","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"EMERGENCY ALERT CASE#6 TYPE:ACCIDENTAL LOCATION:mohali MSG:immediate help"}
+2026-02-28 19:32:40 {"type":"chat","timestamp":"2026-02-28 19:32:40","priority":"HIGH","senderId":1,"sender":"WebBackend","role":"ADMIN","location":"ControlRoom","text":"CASE#6 CHAT CITIZEN:yashasvi please help"}
